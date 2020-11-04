@@ -53,7 +53,7 @@ background: #546a8f;
   }
 }
 
-// Todo lo que esta dentro del .menu es referido como menu principal y llega hasta el __link 
+/* Todo lo que esta dentro del .menu es referido como menu principal y llega hasta el __link  */
 .menu{
   background: #546a8f;
   padding-left: 0;
@@ -95,4 +95,50 @@ background: #546a8f;
 
 
 }
+
+.submenu {
+  background: #546a8f;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  position: absolute;
+  list-style: none;
+transform: translateX(-0.01%);
+  transition: transform .3s; 
+
+  
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateX(-100%);
+
+    &--show{
+    transform: translateX(0);
+  }
+
+}
+
+}
+
+.sub__item{
+    padding: 1em;
+    border-bottom: 1px solid $menu-color;
+
+    @media screen and (min-width: 768px) {
+      border-bottom: none;
+      text-transform: uppercase;
+
+    &:hover{
+        background: gray;
+      }
+  }
+}
+
+.sub__link{
+  color: $menu-color;
+  text-decoration: none;
+}
+
 
